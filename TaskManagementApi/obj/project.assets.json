@@ -4095,11 +4095,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskManagementApi\\TaskManagementApi.csproj",
+      "projectUniqueName": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskManagementApi\\TaskManagementApi.csproj",
       "projectName": "TaskManagementApi",
-      "projectPath": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskManagementApi\\TaskManagementApi.csproj",
+      "projectPath": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskManagementApi\\TaskManagementApi.csproj",
       "packagesPath": "C:\\Users\\sifis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskManagementApi\\obj\\",
+      "outputPath": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskManagementApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sifis\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9eugDCXfqEkVcJQOpwXZcIe9RPmd7/SocnrZVNopW6lJVSUyvlGrLMjCSqklwxLjrzLiiIA9SpjvMYM7HvAx5g==",
+  "dgSpecHash": "iLEyRD/rNBz8/uhzN0mE6Xi+uo4Rb8uenRm9LAc1JpjIdB3ZW+dpnnBLwv1LI2VoE3Xug//J+TkFzLLcWV6Vkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskControllerTests\\TaskControllerTests.csproj",
+  "projectFilePath": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskControllerTests\\TaskControllerTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sifis\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\sifis\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

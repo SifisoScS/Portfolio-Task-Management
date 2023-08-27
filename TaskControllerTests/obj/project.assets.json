@@ -5198,11 +5198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskControllerTests\\TaskControllerTests.csproj",
+      "projectUniqueName": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskControllerTests\\TaskControllerTests.csproj",
       "projectName": "TaskControllerTests",
-      "projectPath": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskControllerTests\\TaskControllerTests.csproj",
+      "projectPath": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskControllerTests\\TaskControllerTests.csproj",
       "packagesPath": "C:\\Users\\sifis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskControllerTests\\obj\\",
+      "outputPath": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskControllerTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sifis\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5219,8 +5219,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskManagementApi\\TaskManagementApi.csproj": {
-              "projectPath": "C:\\Users\\sifis\\source\\repos\\TaskManagementApi\\TaskManagementApi\\TaskManagementApi.csproj"
+            "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskManagementApi\\TaskManagementApi.csproj": {
+              "projectPath": "C:\\Users\\sifis\\source\\repos\\Portfolio-Task-Management\\TaskManagementApi\\TaskManagementApi.csproj"
             }
           }
         }
