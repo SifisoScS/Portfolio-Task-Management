@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManagementApi</name>
+    </assembly>
+    <members>
+        <member name="M:TaskManagementApi.Controllers.TaskController.GetTaskById(System.Int32)">
+            <summary>
+            Retrieves a specific task by ID.
+            </summary>
+            <param name="id">The ID of the task.</param>
+            <returns>The task details.</returns>
+        </member>
+        <member name="T:TaskManagementApi.Migrations.InitialMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:TaskManagementApi.Migrations.InitialMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TaskManagementApi.Migrations.InitialMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TaskManagementApi.Migrations.InitialMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
