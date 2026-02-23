@@ -16,27 +16,31 @@ namespace TaskManagementApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetTasks() => Ok(_taskService.GetTasks());
+        public async Task<IActionResult> GetTasks()
+        {
+            var tasks = await _taskService.GetTasks();
+            return Ok(tasks);
+        }
 
         [HttpPost]
-        public IActionResult AddTask(TaskEntity task)
+        public async Task<IActionResult> AddTask(TaskEntity task)
         {
-            var created = _taskService.AddTask(task);
+            var created = await _taskService.AddTask(task);
             return CreatedAtAction(nameof(GetTasks), new { id = created.Id }, created);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateTask(int id, TaskEntity task)
+        public async Task<IActionResult> UpdateTask(int id, TaskEntity task)
         {
-            var updated = _taskService.UpdateTask(id, task);
+            var updated = await _taskService.UpdateTask(id, task);
             if (updated == null) return NotFound();
             return Ok(updated);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteTask(int id)
+        public async Task<IActionResult> DeleteTask(int id)
         {
-            _taskService.DeleteTask(id);
+            await _taskService.DeleteTask(id);
             return NoContent();
         }
     }

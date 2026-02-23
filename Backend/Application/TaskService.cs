@@ -1,50 +1,41 @@
 using Domain.Entities;
-using Infrastructure.Persistence;
+using Application.Repositories;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace Application.Services
 {
     public class TaskService : ITaskService
     {
-        private readonly AppDbContext _context;
+        private readonly IRepository<TaskEntity> _repository;
 
-        public TaskService(AppDbContext context)
+        public TaskService(IRepository<TaskEntity> repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
-        public IEnumerable<TaskEntity> GetTasks() => _context.Tasks.ToList();
+        public async Task<IEnumerable<TaskEntity>> GetTasks()
+            => await _repository.GetAllAsync();
 
-        public TaskEntity AddTask(TaskEntity task)
-        {
-            _context.Tasks.Add(task);
-            _context.SaveChanges();
-            return task;
-        }
+        public async Task<TaskEntity> AddTask(TaskEntity task)
+            => await _repository.AddAsync(task);
 
-        public TaskEntity UpdateTask(int id, TaskEntity task)
+        public async Task<TaskEntity?> UpdateTask(int id, TaskEntity task)
         {
-            var existing = _context.Tasks.Find(id);
+            var existing = await _repository.GetByIdAsync(id);
             if (existing == null) return null;
 
             existing.Name = task.Name;
             existing.Description = task.Description;
             existing.IsCompleted = task.IsCompleted;
-            _context.SaveChanges();
+            await _repository.UpdateAsync(existing);
             return existing;
         }
 
-        public void DeleteTask(int id)
-        {
-            var existing = _context.Tasks.Find(id);
-            if (existing != null)
-            {
-                _context.Tasks.Remove(existing);
-                _context.SaveChanges();
-            }
-        }
+        public async Task DeleteTask(int id)
+            => await _repository.DeleteAsync(id);
 
-        public TaskEntity GetTaskById(int id) => _context.Tasks.Find(id);
+        public async Task<TaskEntity?> GetTaskById(int id)
+            => await _repository.GetByIdAsync(id);
     }
 }

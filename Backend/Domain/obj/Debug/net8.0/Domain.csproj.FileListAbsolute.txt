@@ -1,0 +1,12 @@
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\bin\Debug\net8.0\Domain.dll
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\bin\Debug\net8.0\Domain.pdb
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.dll
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\Domain.pdb
+C:\users\sifisos\onedrive - derivco (pty) limited\desktop\portfolio\portfolio-task-management\Backend\Domain\obj\Debug\net8.0\ref\Domain.dll

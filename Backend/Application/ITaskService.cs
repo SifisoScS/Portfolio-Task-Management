@@ -1,14 +1,15 @@
 using Domain.Entities;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Application.Services
 {
     public interface ITaskService
     {
-        IEnumerable<TaskEntity> GetTasks();
-        TaskEntity AddTask(TaskEntity task);
-        TaskEntity UpdateTask(int id, TaskEntity task);
-        void DeleteTask(int id);
-        TaskEntity GetTaskById(int id);
+        Task<IEnumerable<TaskEntity>> GetTasks();
+        Task<TaskEntity> AddTask(TaskEntity task);
+        Task<TaskEntity?> UpdateTask(int id, TaskEntity task);
+        Task DeleteTask(int id);
+        Task<TaskEntity?> GetTaskById(int id);
     }
 }
