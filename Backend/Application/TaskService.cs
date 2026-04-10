@@ -1,7 +1,5 @@
 using Domain.Entities;
 using Application.Repositories;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Application.Services
 {
@@ -14,28 +12,31 @@ namespace Application.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<TaskEntity>> GetTasks()
+        public async Task<IEnumerable<TaskEntity>> GetAllAsync()
             => await _repository.GetAllAsync();
 
-        public async Task<TaskEntity> AddTask(TaskEntity task)
+        public async Task<TaskEntity?> GetByIdAsync(int id)
+            => await _repository.GetByIdAsync(id);
+
+        public async Task<TaskEntity> AddAsync(TaskEntity task)
             => await _repository.AddAsync(task);
 
-        public async Task<TaskEntity?> UpdateTask(int id, TaskEntity task)
+        public async Task UpdateAsync(TaskEntity task)
         {
-            var existing = await _repository.GetByIdAsync(id);
-            if (existing == null) return null;
+            var existing = await _repository.GetByIdAsync(task.Id);
+            if (existing == null) return;
 
             existing.Name = task.Name;
             existing.Description = task.Description;
             existing.IsCompleted = task.IsCompleted;
+            existing.ParentId = task.ParentId;
+            existing.DueDate = task.DueDate;
+            existing.Tags = task.Tags;
+            existing.OrderIndex = task.OrderIndex;
             await _repository.UpdateAsync(existing);
-            return existing;
         }
 
-        public async Task DeleteTask(int id)
+        public async Task DeleteAsync(int id)
             => await _repository.DeleteAsync(id);
-
-        public async Task<TaskEntity?> GetTaskById(int id)
-            => await _repository.GetByIdAsync(id);
     }
 }

@@ -226,20 +226,6 @@ export function useReflection() {
   /**
    * Auto-reflect on task completion
    */
-  function autoReflectOnCompletion(taskId: number, taskName: string) {
-    logActivity('completed', taskId, taskName)
-
-    // Auto-trigger reflection if >5 recent completions
-    const recentCompletions = activityLog.value.filter(
-      a => a.action === 'completed' && Date.now() - new Date(a.timestamp).getTime() < 300000 // 5 min
-    )
-
-    if (recentCompletions.length >= 5) {
-      console.log('Auto-triggering reflection after 5 completions in 5 minutes')
-      runReflection('recent-changes', undefined, true) // Use mock for auto-reflection
-    }
-  }
-
   const hasCriticalIssues = computed(() => {
     if (!reflectionResult.value) return false
     const { critique } = reflectionResult.value
@@ -256,7 +242,7 @@ export function useReflection() {
     return reflectionResult.value.critique.opportunities.filter(o => o.type === 'quick-win')
   })
 
-  return {
+  const reflectionApi = {
     // State
     modalVisible,
     loading,
@@ -276,6 +262,22 @@ export function useReflection() {
     openModal,
     closeModal,
     logActivity,
-    autoReflectOnCompletion
+    buildContext,
+    buildSnapshot,
+    autoReflectOnCompletion: (taskId: number, taskName: string) => {
+      logActivity('completed', taskId, taskName)
+
+      // Auto-trigger reflection if >5 recent completions
+      const recentCompletions = activityLog.value.filter(
+        a => a.action === 'completed' && Date.now() - new Date(a.timestamp).getTime() < 300000 // 5 min
+      )
+
+      if (recentCompletions.length >= 5) {
+        console.log('Auto-triggering reflection after 5 completions in 5 minutes')
+        reflectionApi.runReflection('recent-changes', undefined, true) // Use mock for auto-reflection
+      }
+    }
   }
+
+  return reflectionApi
 }

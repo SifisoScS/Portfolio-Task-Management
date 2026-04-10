@@ -13,10 +13,12 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@primevue/themes": "^4.5.4",
     "axios": "^1.13.2",
     "dompurify": "^3.2.5",
     "marked": "^15.0.7",
     "pinia": "^2.3.1",
+    "primeicons": "^7.0.0",
     "primevue": "^4.2.10",
     "vue": "^3.5.24",
     "vue-router": "^4.6.4"

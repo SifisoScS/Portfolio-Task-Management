@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Application\\Application.csproj": {
+    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\sifisos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Application\\obj\\",
+        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sifisos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -41,7 +41,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -62,18 +63,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\sifisos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sifisos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -99,7 +100,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -120,18 +122,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\sifisos\\.nuget\\packages\\",
-        "outputPath": "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sifisos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -146,11 +148,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Application\\Application.csproj"
+              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj"
               },
-              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -164,7 +166,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -191,7 +194,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

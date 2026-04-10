@@ -6,5 +6,10 @@ namespace Domain.Entities
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public bool IsCompleted { get; set; }
+        public int? ParentId { get; set; }
+        public string? DueDate { get; set; }
+        public List<string>? Tags { get; set; }
+        public int OrderIndex { get; set; }
+        public int? GoalId { get; set; }
     }
 }

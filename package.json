@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-task-management",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names \"API,UI\" --prefix-colors \"blue.bold,green.bold\" \"dotnet run --project Backend/TaskManagementApi/TaskManagementApi.csproj\" \"npm --prefix frontend run dev\"",
+    "install:frontend": "npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
