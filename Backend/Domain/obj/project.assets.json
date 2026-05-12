@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\sifisos\\.nuget\\packages\\",
-      "outputPath": "C:\\users\\sifisos\\onedrive - derivco (pty) limited\\desktop\\portfolio\\portfolio-task-management\\Backend\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sifisos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

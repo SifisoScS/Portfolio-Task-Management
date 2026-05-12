@@ -1,6 +1,7 @@
 import { ref, computed } from 'vue'
 import { useTaskStore } from '@/stores/tasks'
 import { reflectionService } from '@/services/reflectionService'
+import { getLoadSheddingStage } from '@/composables/useLoadShedding'
 import type {
   ReflectionInput,
   ReflectionResponse,
@@ -58,16 +59,10 @@ export function useReflection() {
       second: '2-digit'
     })
 
-    // Estimate load-shedding stage (mock - would integrate with Eskom Se Push API)
-    const hour = now.getHours()
-    let loadSheddingStage = 0
-    if (hour >= 6 && hour <= 8) loadSheddingStage = 2 // Morning peak
-    if (hour >= 17 && hour <= 20) loadSheddingStage = 3 // Evening peak
-
     return {
       currentTime,
       timezone: 'Africa/Johannesburg (SAST, UTC+2)',
-      loadSheddingStage,
+      loadSheddingStage: getLoadSheddingStage(),
       userLocation: 'Johannesburg, South Africa',
       recentActivity: activityLog.value.slice(-10)
     }

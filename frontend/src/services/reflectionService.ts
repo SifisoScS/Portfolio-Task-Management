@@ -10,34 +10,20 @@ class ReflectionService {
    */
   async reflect(input: ReflectionInput, useMock = false): Promise<ReflectionResponse> {
     if (useMock) {
-      // Simulate network delay
       await new Promise(resolve => setTimeout(resolve, 800))
       return mockReflection(input)
     }
 
     try {
       const prompt = buildReflectionPrompt(input)
-
-      // TODO: Replace with actual LLM endpoint
-      // Example: POST /api/ai/reflect with { prompt, input }
       const response = await axios.post<ReflectionResponse>(
         `${API_BASE_URL}/ai/reflect`,
-        {
-          prompt,
-          input
-        },
-        {
-          timeout: 30000,
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
+        { prompt, input },
+        { timeout: 60000 }
       )
-
       return response.data
     } catch (error) {
       console.warn('AI reflection endpoint unavailable, falling back to mock:', error)
-      // Fallback to mock if API fails
       return mockReflection(input)
     }
   }

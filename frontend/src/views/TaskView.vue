@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useTaskStore } from '@/stores/tasks'
 import { taskService } from '@/services/taskService'
-import TaskItem from '@/components/task/TaskItem.vue'
+import TaskTree from '@/components/task/TaskTree.vue'
 import TaskForm from '@/components/task/TaskForm.vue'
 import type { Task } from '@/types/task'
 
@@ -12,6 +12,7 @@ const loading = ref(false)
 const error = ref<string | null>(null)
 const searchQuery = ref('')
 const filterStatus = ref<'all' | 'active' | 'done'>('all')
+const searchInputEl = ref<HTMLInputElement | null>(null)
 
 const rootTasks = computed(() =>
   store.rootIds
@@ -57,7 +58,30 @@ async function handleAdd(data: Omit<Task, 'id'>) {
   taskService.create(data).catch(() => {})
 }
 
-onMounted(loadTasks)
+// Keyboard shortcuts: n → new task, / → search, Escape → close
+function handleKeyDown(e: KeyboardEvent) {
+  const target = e.target as HTMLElement
+  const isEditable = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable
+
+  if (e.key === 'n' && !isEditable && !showAddForm.value) {
+    e.preventDefault()
+    showAddForm.value = true
+  } else if (e.key === '/' && !isEditable) {
+    e.preventDefault()
+    searchInputEl.value?.focus()
+  } else if (e.key === 'Escape' && isEditable) {
+    ;(target as HTMLInputElement).blur()
+  }
+}
+
+onMounted(() => {
+  loadTasks()
+  window.addEventListener('keydown', handleKeyDown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown)
+})
 </script>
 
 <template>
@@ -94,9 +118,10 @@ onMounted(loadTasks)
     <!-- Filter bar -->
     <div class="filter-bar">
       <input
+        ref="searchInputEl"
         v-model="searchQuery"
         class="search-input"
-        placeholder="Search tasks…"
+        placeholder="Search tasks… (/)"
         type="search"
       />
       <div class="filter-tabs">
@@ -117,33 +142,26 @@ onMounted(loadTasks)
       <i class="pi pi-exclamation-triangle" /> {{ error }}
     </div>
 
-    <!-- Loading -->
-    <div v-if="loading" class="loading-state">
-      <i class="pi pi-spin pi-spinner" /> Loading tasks…
-    </div>
+    <!-- Task tree (handles loading + empty states via slots) -->
+    <TaskTree :tasks="rootTasks" :loading="loading">
+      <template #empty>
+        <div class="empty-state">
+          <div class="empty-glow" />
+          <div class="empty-icon">◈</div>
+          <h2 class="empty-title" v-if="searchQuery || filterStatus !== 'all'">No matching tasks</h2>
+          <h2 class="empty-title" v-else>Your workspace is ready</h2>
+          <p class="empty-sub" v-if="searchQuery || filterStatus !== 'all'">Try adjusting your search or filter.</p>
+          <p class="empty-sub" v-else>Create your first task and start turning goals into outcomes.</p>
+          <button class="btn-add empty-cta" @click="showAddForm = true">
+            <i class="pi pi-plus" /> New task
+          </button>
+        </div>
+      </template>
+    </TaskTree>
 
-    <!-- Task list -->
-    <div v-else-if="rootTasks.length" class="task-list">
-      <TaskItem
-        v-for="task in rootTasks"
-        :key="task.id"
-        :task="task"
-        :depth="0"
-      />
-    </div>
-
-    <!-- Empty state -->
-    <div v-else class="empty-state">
-      <div class="empty-glow" />
-      <div class="empty-icon">◈</div>
-      <h2 class="empty-title" v-if="searchQuery || filterStatus !== 'all'">No matching tasks</h2>
-      <h2 class="empty-title" v-else>Your workspace is ready</h2>
-      <p class="empty-sub" v-if="searchQuery || filterStatus !== 'all'">Try adjusting your search or filter.</p>
-      <p class="empty-sub" v-else>Create your first task and start turning goals into outcomes.</p>
-      <button class="btn-add empty-cta" @click="showAddForm = true">
-        <i class="pi pi-plus" /> New task
-      </button>
-    </div>
+    <p v-if="!loading" class="kbd-hint">
+      Press <kbd>n</kbd> to add a task · <kbd>/</kbd> to search
+    </p>
   </div>
 
   <TaskForm
@@ -299,33 +317,23 @@ onMounted(loadTasks)
   margin-bottom: 0.75rem;
 }
 
-.loading-state {
-  padding: 3rem;
+.kbd-hint {
   text-align: center;
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+  margin-top: 0.75rem;
+  letter-spacing: 0.01em;
 }
 
-.task-list {
-  background: var(--color-surface);
+kbd {
+  display: inline-block;
+  padding: 0.1em 0.4em;
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border-top: 2px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-}
-
-.task-list::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-primary);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
 }
 
 .empty-state {

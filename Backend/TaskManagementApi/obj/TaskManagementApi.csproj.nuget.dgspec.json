@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -122,18 +122,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\sifisos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sifisos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -194,7 +194,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -223,8 +223,8 @@
               "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj": {
                 "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Application\\Application.csproj"
               },
-              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\backend\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\sifisos\\OneDrive - Derivco (Pty) Limited\\Desktop\\Portfolio\\Portfolio-Task-Management\\Backend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -277,7 +277,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

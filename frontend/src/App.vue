@@ -3,11 +3,13 @@ import { onMounted } from 'vue'
 import { useTaskStore } from '@/stores/tasks'
 import { useReflection } from '@/composables/useReflection'
 import { useTheme } from '@/composables/useTheme'
+import { useLoadShedding } from '@/composables/useLoadShedding'
 import ReflectionModal from '@/components/reflection/ReflectionModal.vue'
 
 const taskStore = useTaskStore()
 const reflection = useReflection()
 const { theme, toggle, init } = useTheme()
+const { stageLabel, stageColor, status } = useLoadShedding()
 
 onMounted(init)
 </script>
@@ -27,6 +29,16 @@ onMounted(init)
       </nav>
 
       <div class="app-header-actions">
+        <!-- Load-shedding status chip -->
+        <div
+          class="ls-chip"
+          :class="`ls-${stageColor}`"
+          :title="`Load-shedding: ${stageLabel} · Source: ${status.source} · Updated: ${new Date(status.lastUpdated).toLocaleTimeString('en-ZA')}`"
+        >
+          <span class="ls-dot" />
+          <span class="ls-label">{{ stageLabel }}</span>
+        </div>
+
         <button
           class="btn-reflect"
           :class="{ 'has-issues': reflection.hasCriticalIssues.value }"
@@ -202,6 +214,46 @@ onMounted(init)
 
 .btn-theme .pi-sun  { color: #f59e0b; }
 .btn-theme .pi-moon { color: #818cf8; }
+
+/* Load-shedding status chip */
+.ls-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3em 0.75em;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  cursor: default;
+  transition: var(--transition);
+}
+
+.ls-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: ls-pulse 2s ease-in-out infinite;
+}
+
+@keyframes ls-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.ls-chip.ls-green  { background: rgba(34, 197, 94, 0.12);  border-color: rgba(34, 197, 94, 0.25);  color: #22c55e; }
+.ls-chip.ls-green  .ls-dot  { background: #22c55e; }
+
+.ls-chip.ls-yellow { background: rgba(234, 179, 8, 0.12);  border-color: rgba(234, 179, 8, 0.25);  color: #eab308; }
+.ls-chip.ls-yellow .ls-dot  { background: #eab308; }
+
+.ls-chip.ls-orange { background: rgba(249, 115, 22, 0.12); border-color: rgba(249, 115, 22, 0.25); color: #f97316; }
+.ls-chip.ls-orange .ls-dot  { background: #f97316; }
+
+.ls-chip.ls-red    { background: rgba(239, 68, 68, 0.12);  border-color: rgba(239, 68, 68, 0.25);  color: #ef4444; }
+.ls-chip.ls-red    .ls-dot  { background: #ef4444; }
 
 .app-main {
   flex: 1;

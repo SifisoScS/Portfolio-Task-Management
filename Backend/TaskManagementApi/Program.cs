@@ -25,6 +25,13 @@ builder.Services.AddScoped<IRepository<GoalEntity>, GoalRepository>();
 builder.Services.AddScoped<IRepository<ObjectiveEntity>, ObjectiveRepository>();
 builder.Services.AddScoped<IGoalService, GoalService>();
 
+builder.Services.AddHttpClient("anthropic", client =>
+{
+    client.BaseAddress = new Uri("https://api.anthropic.com/");
+    client.DefaultRequestHeaders.Add("anthropic-version", "2023-06-01");
+    client.Timeout = TimeSpan.FromSeconds(60);
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
